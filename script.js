@@ -11,7 +11,7 @@ var li = document.querySelectorAll("li");
 //create a helper function to recieve a list element and add an event listener to toggle on and off done when clicked
 function assignDoneToggle(li){
 	li.addEventListener("click", function(){
-		li.classList.toggle("done")
+		li.classList.toggle("done");
 	})
 
 }
@@ -27,6 +27,7 @@ function createListElement() {
 	li.appendChild(document.createTextNode(input.value)); //append a child with the value of input
 	assignDoneToggle(li); // assign an event listener 
 	ul.appendChild(li); // append the li to the ul
+	addDeleteButton(li); //item has delete button
 	input.value = ""; // reset the input field to empty
 
 }
@@ -56,9 +57,38 @@ li.forEach(function(li){ // iterate through all li
 	addDeleteButton(li); //item has delete button
 })
 
+
 // add delete buttons and when clicked on, they delete the corresponding items
 function addDeleteButton(li){
-	pass
+	//create a button with delete in it
+	button = document.createElement("button");
+	button.appendChild(document.createTextNode("delete"));
+
+	
+	// insert button after each li
+	li.parentNode.insertBefore(button, li.nextSibling);
+
+	// Add event listener when clicked
+	button.addEventListener("click", function(){
+		//Delete li item and the button
+		console.log(li);
+		console.log(button);
+		//li.remove();
+		button.remove();
+
+	
+	})
+
+	
+	
+	
+
+	
+
+
+
+
+	// add that element directly after the list item with class name delete
 }
 
 
