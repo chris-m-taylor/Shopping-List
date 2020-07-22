@@ -61,7 +61,7 @@ li.forEach(function(li){ // iterate through all li
 // add delete buttons and when clicked on, they delete the corresponding items
 function addDeleteButton(li){
 	//create a button with delete in it
-	button = document.createElement("button");
+	var button = document.createElement("button");
 	button.appendChild(document.createTextNode("delete"));
 
 	
@@ -76,7 +76,6 @@ function addDeleteButton(li){
 		li.remove();
 		button.remove();
 
-	
 	})
 
 	
