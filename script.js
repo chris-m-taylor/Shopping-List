@@ -73,7 +73,7 @@ function addDeleteButton(li){
 		//Delete li item and the button
 		console.log(li);
 		console.log(button);
-		//li.remove();
+		li.remove();
 		button.remove();
 
 	
