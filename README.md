@@ -2,6 +2,9 @@
 
 This is an exercise to demonstrate basic DOM manipulation using JavaScript
 
+## How to access?
+Click on the website link underneath the description
+
 ## How it works
 <ul>
   <li>Items can be clicked on the "check them off".</li>
